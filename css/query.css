@@ -1,0 +1,109 @@
+/* we use Em in media query */
+
+/* We start with this width  so 1350 /16 so the result is em
+We should work in media query every  range from 200 to 300 px
+
+ And no  add media query every 50 pixel
+
+So we  down 300 handard to find what is problem in 900px
+
+
+*/
+
+/* ***************************
+***************************
+
+      Below 1344px (Smaller Desktop)
+***************************
+*************************** */
+/* so focus on change width of container and  html fontsize and grid-templete*/
+@media (max-width: 84em) {
+}
+/* ***************************
+***************************
+
+Below 1200px (landscape Tablet)
+***************************
+*************************** */
+/* focus on grid gap  padding font size*/
+@media (max-width: 75em) {
+  /* 9px/16px  */
+
+  html {
+    font-size: 56.25%;
+  }
+}
+/* ***************************
+***************************
+
+      Below 900px (Tablet)
+***************************
+*************************** */
+/* focus on grid gap  padding font size img width  center  you much focuse in center in this phase
+
+NOTE : 3/5=60%  but 2/5= 40%
+ so we can make 5 col in grid and you make it 3fr 2fr
+
+  He show us trick here to to make more control on grid
+      grid-template-columns: 3fr 2fr;
+s
+*/
+@media (max-width: 75em) {
+  /* 8px/16px  */
+
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ***************************
+***************************
+
+Below 704px (smaller Tablet)
+***************************
+*************************** */
+/* focus on grid make all grid 2 coloumn and arange grid  grid-row:1*/
+@media (max-width: 44em) {
+  .grid__2__cols {
+    grid-template-columns: 1fr;
+  }
+  .grid__3__cols {
+    grid-template-columns: 1fr;
+  }
+  .grid__4__cols {
+    grid-template-columns: 1fr;
+  }
+  .navbar__item a {
+    font-size: 2rem;
+  }
+}
+/* ***************************
+***************************
+
+Below 544px (smaller Phone)
+***************************
+*************************** */
+/* focus on grid make all grid 1 coloumn and arange grid  grid-row:1  make sure that translate is like  matgin we should make speration between  items*/
+@media (max-width: 36em) {
+  .grid__2__cols {
+    grid-template-columns: 1fr;
+  }
+  .grid__3__cols {
+    grid-template-columns: 1fr;
+  }
+  .grid__4__cols {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    width: 15rem;
+    display: block;
+    height: auto;
+  }
+  .about__page p {
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #666;
+  }
+}
