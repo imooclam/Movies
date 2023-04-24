@@ -11,16 +11,16 @@ import {
 import { Link, useParams } from 'react-router-dom';
 
 const Movie = () => {
+  const { id } = useParams();
   const { isLoading, error, singleMovie } = useSelector(allMovieSelector);
   const dispatch = useDispatch();
-  const { id } = useParams();
 
   const fetchSingleMovie = async url => {
     dispatch(showLoading());
     try {
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.Response === 'True') {
         dispatch(single(data));
       } else {
@@ -51,7 +51,7 @@ const Movie = () => {
       </div>
     );
   }
-  console.log(singleMovie);
+  // console.log(singleMovie);
   const { Poster: poster, Title: title, Plot: plot, Year: year } = singleMovie;
 
   return (
@@ -63,7 +63,7 @@ const Movie = () => {
         <h4>{year}</h4>
         <Link to="/" className="btn">
           {' '}
-          Back to Movie
+          Back to home
         </Link>
       </section>
     </article>

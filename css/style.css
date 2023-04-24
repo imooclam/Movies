@@ -137,6 +137,16 @@ Movies
   padding-bottom: 5rem;
   padding-top: 3rem;
 }
+.movies h4 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #666;
+}
+.movies p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #666;
+}
 .movie {
   position: relative;
   overflow: hidden;
