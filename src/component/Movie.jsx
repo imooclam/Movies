@@ -12,6 +12,9 @@ import {
   movies,
   errors,
 } from '../feature/movieSlice';
+
+console.log(API_ENDPOINT);
+
 import { Link } from 'react-router-dom';
 
 export const Movie = () => {
@@ -46,6 +49,7 @@ export const Movie = () => {
 
   useEffect(() => {
     fetchData(`${API_ENDPOINT}&s=${query}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   if (isLoading) {
