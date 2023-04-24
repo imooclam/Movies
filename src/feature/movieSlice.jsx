@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const API_ENDPOINT = `http://www.omdbapi.com/?apikey=${
-  import.meta.env.MOVIE_API_KEY
+export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${
+  import.meta.env.VITE_MOVIE_API_KEY
 }`;
 console.log(API_ENDPOINT);
 // # test URL
