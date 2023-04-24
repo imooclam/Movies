@@ -350,19 +350,25 @@ ul {
 
 /* buttons */
 
+a .btn {
+  color: var(--white);
+  background: var(--primary-100);
+}
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--primary-500);
+  background: var(--primary-100);
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
   /* we change padding */
-  padding: 0.375rem 0.75rem;
+  padding: 0.5rem 1rem;
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   text-transform: capitalize;
   display: inline-block;
+  font-size: 2rem;
+  color: #fff;
 
   /* display: block;
   width: 300px;
@@ -370,6 +376,7 @@ ul {
 }
 .btn:hover {
   background: var(--primary-700);
+  color: #fff;
   box-shadow: var(--shadow-3);
 }
 .btn-hipster {
