@@ -29,7 +29,7 @@ export const Movie = () => {
       const res = await fetch(url);
       const data = await res.json();
       // console.log(res);
-      // console.log(data);
+      console.log(data);
 
       if (data.Response === 'True') {
         dispatch(movies(data.Search));

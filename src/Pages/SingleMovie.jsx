@@ -20,7 +20,7 @@ const Movie = () => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-      // console.log(data);
+      console.log(data);
       if (data.Response === 'True') {
         dispatch(single(data));
       } else {
@@ -61,6 +61,7 @@ const Movie = () => {
         <h3>{title}</h3>
         <h3>{plot}</h3>
         <h4>{year}</h4>
+        <h4>{singleMovie.Runtime}</h4>
         <Link to="/" className="btn">
           {' '}
           Back to home

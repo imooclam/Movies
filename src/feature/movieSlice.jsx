@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const API_ENDPOINT = `http://www.omdbapi.com/?apikey=${
+export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${
   import.meta.env.VITE_SOME_MOVIE_API_KEY
 }`;
 console.log(API_ENDPOINT);
@@ -9,7 +9,7 @@ console.log(API_ENDPOINT);
 const initialState = {
   isLoading: true,
   error: { show: false, Mes: '' },
-  query: 'batman',
+  query: 'click',
   wholeMovie: [],
   singleMovie: [],
 };
